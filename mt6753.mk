@@ -50,12 +50,21 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.config=fakeiccid \
     ro.com.android.mobiledata=false
 
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/fstab.charger:root/fstab.charger \
+    $(COMMON_PATH)/rootdir/fstab.swap:root/fstab.swap \
+    $(COMMON_PATH)/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc \
+    $(COMMON_PATH)/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc
 
 #Custom charger images
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/charger/res/values/charger/animation.txt:root/res/values/charger/animation.txt \
     $(COMMON_PATH)/charger/res/images/my_battery_scale.png:root/res/images/my_battery_scale.png \
     $(COMMON_PATH)/charger/res/images/font_log.png:root/res/images/font_log.png
+
+# Overlay
+DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay
 
 # USB Hal
 PRODUCT_PACKAGES += \
