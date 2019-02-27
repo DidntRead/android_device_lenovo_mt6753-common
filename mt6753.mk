@@ -54,8 +54,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.charger:root/fstab.charger \
     $(COMMON_PATH)/rootdir/fstab.swap:root/fstab.swap \
-    $(COMMON_PATH)/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc \
-    $(COMMON_PATH)/rootdir/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc
+    $(COMMON_PATH)/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc
 
 #Custom charger images
 PRODUCT_COPY_FILES += \
