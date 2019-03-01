@@ -26,7 +26,6 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := vendor/mediatek/framework_manifest.xml
 ARCH := arm64
 TARGET_ARCH := arm64
 KERNEL_ARCH := arm64
-TARGET_KERNEL_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
@@ -36,15 +35,12 @@ TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
-TARGET_USES_64_BIT_BINDER := true
-TARGET_IS_64_BIT :=true
 TARGET_BOARD_SUFFIX := _64
 TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_32_BIT := armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
 TARGET_SUPPORTS_32_BIT_APPS := true
 TARGET_SUPPORTS_64_BIT_APPS := true
-BOARD_KERNEL_OFFSET := 0x00080000
 
 # Charger
 BOARD_CHARGER_SHOW_PERCENTAGE := true
@@ -92,18 +88,18 @@ BOARD_GLOBAL_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 BOARD_GLOBAL_CFLAGS += -DMTK_HARDWARE
 
 # Kernel
-TARGET_KMODULES := false
-BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
-BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --board A7010a48
-BOARD_KERNEL_PAGESIZE := 2048
 TARGET_USES_64_BIT_BINDER := true
 TARGET_IS_64_BIT := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 firmware_class.path=/system/vendor/firmware androidboot.selinux=permissive loop.max_part=7
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 firmware_class.path=/system/vendor/firmware androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --board A7010
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+MTK_APPENDED_DTB_SUPPORT := yes
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 # Recovery
 BOARD_NO_SECURE_DISCARD := true

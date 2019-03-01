@@ -203,9 +203,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl
 
 # Health HAL
-#PRODUCT_PACKAGES += \
-#    android.hardware.health@1.0-impl \
-#    android.hardware.health@1.0-service
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-service
 
 # Neural
 PRODUCT_PACKAGES += android.hardware.neuralnetworks@1.1-service-armnn
