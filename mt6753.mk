@@ -26,6 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Dalvik heap configurations
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 
+# Vendor properties
+include $(COMMON_PATH)/vendor_prop.mk
+
 # Screen density
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
@@ -112,6 +115,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
 
+# Recovery
+PRODUCT_COPY_FILES += $(COMMON_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Mediatek
 PRODUCT_PACKAGES += \
     libstlport
@@ -142,6 +148,7 @@ PRODUCT_PACKAGES += \
 
 # Lineage
 PRODUCT_PACKAGES += \
+    lineage.livedisplay@2.0-service-mtk \
     lineage.touch@1.0-service.lenovo \
     lineage.trust@1.0-service
 
