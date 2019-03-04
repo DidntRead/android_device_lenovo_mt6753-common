@@ -71,7 +71,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
-    keyguard.no_require_sim=true \
     camera.disable_zsl_mode=1 \
     ro.sf.hwrotation=0 \
     ro.oem_unlock_supported=1

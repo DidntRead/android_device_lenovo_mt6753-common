@@ -106,6 +106,8 @@ BOARD_NO_SECURE_DISCARD := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/recovery.fstab
+LZMA_RAMDISK_TARGETS := recovery # TODO Actually enable support for lzma ramdisk
 
 # TWRP
 TW_THEME := portrait_hdpi
@@ -160,9 +162,6 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
-
-# Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/recovery.fstab
 
 # Shims
 TARGET_LD_SHIM_LIBS := /system/lib/libgui.so|/system/vendor/lib/libmtkshim_gui.so:/system/lib64/libgui.so|/system/vendor/lib64/libmtkshim_gui.so:/system/vendor/lib/hw/audio.primary.mt6753.so|/system/vendor/lib/libmtkshim_audio.so:/system/vendor/lib64/hw/audio.primary.mt6753.so|/system/vendor/lib64/libmtkshim_audio.so:/system/vendor/lib/libcam.camadapter.so|/system/vendor/lib/libmtkshim_camera.so:/system/vendor/lib64/libcam.camadapter.so|/system/vendor/lib64/libmtkshim_camera.so:/system/lib/libui.so|/system/vendor/lib/libmtkshim_ui.so:/system/lib64/libui.so|/system/vendor/lib64/libmtkshim_ui.so:/system/vendor/lib/libcam.camnode.so|/system/vendor/lib/libmtkshim_camera.so:/system/vendor/lib64/libcam.camnode.so|/system/vendor/lib64/libmtkshim_camera.so
