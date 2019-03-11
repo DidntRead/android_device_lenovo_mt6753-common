@@ -84,9 +84,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# SysRescue
+# RescueParty
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.enable_rescue=0
+    persist.sys.disable_rescue=1
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
