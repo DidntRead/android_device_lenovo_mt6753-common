@@ -65,9 +65,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.md.perm.checked=1 \
     ro.mediatek.chip_ver=S01 \
     ro.mediatek.platform=MT6735 \
-    persist.mtk.wcn.combo.chipid=0x6630 \
-    persist.sys.display.clearMotion=0 \
-    ro.mtk_clearmotion_support=1
+    persist.mtk.wcn.combo.chipid=0x6630
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
