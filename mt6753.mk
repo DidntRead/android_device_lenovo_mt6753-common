@@ -69,8 +69,6 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-   android.hardware.wifi@1.0 \
-   android.hardware.wifi@1.0-impl \
    android.hardware.wifi@1.0-service \
    lib_driver_cmd_mt66xx \
    libwifi-hal-mt66xx \

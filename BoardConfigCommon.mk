@@ -66,6 +66,9 @@ TARGET_USES_MKE2FS := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_mediatek
+
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
