@@ -86,6 +86,7 @@
 
     <string-array name="config_tether_usb_regexs">
         <item>"rndis\\d"</item>
+        <item>"usb\\d"</item>
     </string-array>
 
     <string-array name="config_tether_wifi_regexs">
@@ -96,8 +97,8 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
+        <item>"bnep\\d"</item>
         <item>"bt-pan"</item>
-        <item>"bt-dun"</item>
     </string-array>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
