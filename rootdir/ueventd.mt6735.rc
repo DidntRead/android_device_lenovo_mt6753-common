@@ -72,13 +72,6 @@
 /dev/ccci_aud             0660   audio      audio
 /dev/ccci2_aud            0660   audio      audio
 /dev/eemcs_aud            0660   audio      audio
-/dev/irtx                 0660   system     system
-/dev/ir-learning          0660   system     system
-
-# SGX device node
-/dev/pvrsrvkm             0666   root       root
-/dev/pvr_sync             0666   root       root
-
 
 /sys/devices/platform/leds-mt65xx/leds/green   delay_on      0664  system   system
 /sys/devices/platform/leds-mt65xx/leds/green   delay_off      0664  system   system
@@ -90,6 +83,44 @@
 #GPIO
 /dev/mtgpio               0600   radio      root
 
+# Sensor
+/dev/hwmsensor            0660   system	    nvram
+/dev/msensor              0660   system	    nvram
+/dev/gsensor              0660   system	    nvram
+/dev/als_ps               0660   radio	    nvram
+/dev/aal_als              0660   system	    nvram
+/sys/class/misc/m_alsps_misc   alsactive         0660   system	    system
+/sys/class/misc/m_alsps_misc   alsbatch          0660   system	    system
+/sys/class/misc/m_alsps_misc   alsdelay          0660   system	    system
+/sys/class/misc/m_alsps_misc   alsdevnum         0440   system	    system
+/sys/class/misc/m_alsps_misc   alsflush          0660   system	    system
+/sys/class/misc/m_alsps_misc   psactive          0660   system	    system
+/sys/class/misc/m_alsps_misc   psbatch           0660   system	    system
+/sys/class/misc/m_alsps_misc   psdelay           0660   system	    system
+/sys/class/misc/m_alsps_misc   psdevnum          0440   system	    system
+/sys/class/misc/m_alsps_misc   psflush           0660   system	    system
+
+/sys/class/misc/m_acc_misc     accactive         0660   system	    system
+/sys/class/misc/m_acc_misc     accbatch          0660   system	    system
+/sys/class/misc/m_acc_misc     accdelay          0660   system	    system
+/sys/class/misc/m_acc_misc     accdevnum         0440   system	    system
+/sys/class/misc/m_acc_misc     accflush          0660   system	    system
+
+/sys/class/misc/m_mag_misc     magactive         0660   system	    system
+/sys/class/misc/m_mag_misc     magbatch          0660   system	    system
+/sys/class/misc/m_mag_misc     magdelay          0660   system	    system
+/sys/class/misc/m_mag_misc     magdevnum         0440   system	    system
+/sys/class/misc/m_mag_misc     magflush          0660   system	    system
+/sys/class/misc/m_mag_misc     magoactive        0660   system	    system
+/sys/class/misc/m_mag_misc     magobatch         0660   system	    system
+/sys/class/misc/m_mag_misc     magodelay         0660   system	    system
+/sys/class/misc/m_mag_misc     magoflush         0660   system	    system
+
+/sys/class/misc/m_gyro_misc	gyroenablenodata 0660   system	    system
+/sys/class/misc/m_gyro_misc	gyroactive 	0660   system	    system
+/sys/class/misc/m_gyro_misc	gyrodelay 	0660   system	    system
+/sys/class/misc/m_gyro_misc	gyrobatch 	0660   system	    system
+/sys/class/misc/m_gyro_misc	gyroflush 	0660   system	    system
 
 #FOR VIA MODEM
 /dev/ttySDIO*             0660   radio      sdcard_rw
