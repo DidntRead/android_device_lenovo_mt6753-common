@@ -18,6 +18,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.gemini.sim_num=2 \
     ro.gemini.smart_sim_switch=false
 
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.maintainer=DidntRead
+
+# NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.nfc.port=I2C
+
 # WIFI
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
