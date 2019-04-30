@@ -75,7 +75,10 @@ USE_MINIKIN := true
 # Configure jemalloc for low memory
 MALLOC_SVELTE := true
 
+# Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Graphics
 OVERRIDE_RS_DRIVER := libRSDriver_mtk.so
@@ -85,10 +88,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 BOARD_PROVIDES_LIBRIL := true
 
 # MTK Hardware
-BOARD_USES_MTK_HARDWARE := true
 TARGET_USES_ION := true
 BOARD_GLOBAL_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
-BOARD_GLOBAL_CFLAGS += -DMTK_HARDWARE
 
 # Kernel
 TARGET_IS_64_BIT := true
