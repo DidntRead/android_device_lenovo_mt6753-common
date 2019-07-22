@@ -61,6 +61,10 @@ DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2019-06-05
+
 # Wifi
 PRODUCT_PACKAGES += \
    android.hardware.wifi@1.0-service \
