@@ -133,7 +133,6 @@ PRODUCT_PACKAGES += \
 
 # RenderScript
 PRODUCT_PACKAGES += \
-    libRSDriver_mtk \
     android.hardware.renderscript@1.0-impl
 
 # Graphics
